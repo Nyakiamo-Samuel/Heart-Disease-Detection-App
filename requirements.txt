@@ -1,6 +1,3 @@
-pip install --upgrade pip
-%pip install pandas numpy pickle streamlit plotly-express Pillow joblib warnings
-
 pandas
 numpy
 pickle
@@ -9,20 +6,3 @@ plotly-express
 Pillow
 joblib
 warnings
-
-pip install --upgrade pip
-pip install pandas numpy pickle streamlit plotly-express Pillow joblib warnings
-
-# Creating the app
-import pandas as pd
-import numpy as np
-import pickle
-import streamlit as st
-import plotly.express as px
-from PIL import Image
-import joblib
-import warnings
-warnings.filterwarnings('ignore')
-import pandas as pd
-import streamlit as st 
-import plotly.express as px
