@@ -4,5 +4,3 @@ streamlit
 plotly
 Pillow
 joblib
-warnings
-pickle
