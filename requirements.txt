@@ -2,7 +2,7 @@ pandas
 numpy
 pickle
 streamlit
-plotly-express
+plotly
 Pillow
 joblib
 warnings
