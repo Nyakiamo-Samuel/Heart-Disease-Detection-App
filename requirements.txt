@@ -1,3 +1,6 @@
+pip install --upgrade pip
+%pip install pandas numpy pickle streamlit plotly-express Pillow joblib warnings
+
 pandas
 numpy
 pickle
@@ -7,7 +10,9 @@ Pillow
 joblib
 warnings
 
-%pip install pandas numpy pickle streamlit plotly-express Pillow joblib warnings
+pip install --upgrade pip
+pip install pandas numpy pickle streamlit plotly-express Pillow joblib warnings
+
 # Creating the app
 import pandas as pd
 import numpy as np
