@@ -1,8 +1,8 @@
 pandas
 numpy
-pickle
 streamlit
 plotly
 Pillow
 joblib
 warnings
+pickle
