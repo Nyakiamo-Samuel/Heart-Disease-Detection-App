@@ -13,7 +13,25 @@ st.write("""
 # Load the dataset
 heart_train_df=pd.read_csv('train.csv')
 heart_train_df.drop(columns=['id'], inplace=True)   
+
 heart_train_df['Sex'] = heart_train_df['Sex'].map({0: 'Female', 1: 'Male'})
+heart_train_df['Chest pain type'] = heart_train_df['Chest pain type'].map({1: 'Typical Anginia', 2: 'Atypical Anginia', 3: 'Non-Anginal pain', 4: 'Assymptomatic'})
+heart_train_df['FBS over 120'] = heart_train_df['FBS over 120'].map({0: 'Less than 120 mgdL', 1: 'Greater than 120 mgdL'})
+heart_train_df['EKG results'] = heart_train_df['EKG results'].map({0: 'Normal', 1: 'ST-T wave abnormality', 2: 'Left ventricular hypertrophy'})
+heart_train_df['Exercise angina'] = heart_train_df['Exercise angina'].map({0: 'No', 1: 'Yes'})
+heart_train_df['Number of vessels fluro'] = heart_train_df['Number of vessels fluro'].map({0: '0', 1: '1', 2: '2', 3: '3'})       
+heart_train_df['Thallium'] = heart_train_df['Thallium'].map({3: 'Normal', 6: 'Fixed Defect', 7: 'Reversible Defect'})
+# Categorising the slope of ST segment
+def slope_of_st_mapping(value):
+    if value == 0 or value < 1:
+        return 'Upsloping'
+    elif value == 1:
+        return 'Flat'
+    elif value > 1:
+        return 'Downsloping'
+    else:
+        return 'Unknown'
+heart_train_df['Slope of ST'] = heart_train_df['Slope of ST'].apply(slope_of_st_mapping)
 
 col1, col2, col3 = st.columns(3)
 
