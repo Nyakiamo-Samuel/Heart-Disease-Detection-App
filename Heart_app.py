@@ -34,7 +34,7 @@ st.divider() # Adds a clean horizontal line
 
 
 # Columns for layout
-col1, col2, col3 = st.columns(3)
+col1, col2, col3 = st.columns([1, 2, 1])
 
 col1.write('''
          For any assistance or inquiries, turn over to page 2 of the app where you can find more information about heart health, 
