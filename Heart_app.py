@@ -17,7 +17,7 @@ st.set_page_config(page_title='Heart Disease Predictor App',
 
 # Insert image on the top of the app
 image_1 = Image.open('heart_image.jpg')
-st.image(image_1, caption='Heart Disease Prediction App', use_container_width=True)
+st.image(image_1, caption='Heart Image', use_container_width=True)
 st.divider()  
 
 # Load pre-trained model
