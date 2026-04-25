@@ -33,8 +33,13 @@ st.write("""
 # Columns for layout
 col1, col2, col3 = st.columns(3)
 
+col1.write('''
+         For any assistance or inquiries, turn over to page 2 of the app where you can find more information about heart health, 
+         risk factors, and preventive measures. Stay informed and take care of your heart!
+         ''')
+
 # 1. Inject CSS to hide the controls and set a custom width
-st.markdown(
+col2.markdown(
     """
     <style>
     /* Target the video element specifically */
@@ -84,7 +89,8 @@ with col1:
         ST_Depression=st.slider('ST Depression', min_value=0.0, max_value=6.5, value=0.0, step=0.1,
                                     key='unique_st_depression_selectbox')
         Sex=st.radio('Sex', ['Female', 'Male'], key='unique_gender_radio')
-        Chest_pain_type=st.selectbox('Chest pain type', ['Typical Anginia', 'Atypical Anginia', 'Non-Anginal pain', 'Assymptomatic'], key='unique_chest_pain_type_selectbox')
+        Chest_pain_type=st.selectbox('Chest pain type', ['Typical Anginia', 'Atypical Anginia', 'Non-Anginal pain', 'Assymptomatic'], 
+        key='unique_chest_pain_type_selectbox')
         FBS_over_120=st.selectbox('FBS over 120', ['Less than 120 mgdL', 'Greater than 120 mgdL'], key='unique_fbs_selectbox')
         EKG_results=st.selectbox('EKG results', ['Normal', 'ST-T abnormality', 'Left ventricular hypertrophy'], key='unique_ekg_selectbox')
         Ecercise_induced_Angina=st.selectbox('Exercise angina', ['No', 'Yes'], key='unique_exercise_angina_selectbox')
@@ -141,6 +147,7 @@ def prepare_input(data, feature_list=features):
     # Convert the dictionary to a DataFrame
     input_array=np.array([list(input_data.values())])
     return pd.DataFrame(input_array.reshape(1, -1), columns=features)
+
 
 #with col2:
  #   # Predict button
