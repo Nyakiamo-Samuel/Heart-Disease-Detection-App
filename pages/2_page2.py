@@ -45,5 +45,54 @@ The modular nature of the Python scripts and the use of modern deployment framew
 * **Integration of SHAP/LIME:** To provide "Explainable AI" (XAI) insights, showing patients which specific factor most influenced their risk score.
 * **Cloud Integration:** Deployment to Streamlit Cloud or AWS for global accessibility.
 * **Batch Processing:** Extending the UI to allow for the upload of entire CSV datasets for population-wide heart health screening.
-            
+
+---
+
+### **Clinical Variable Definitions**
+
+| Variable | Description & Options |
+| :--- | :--- |
+| **Age** | Represents the patient's age in years. Age is a primary risk factor for heart disease. |
+| **Blood Pressure (BP)** | Resting blood pressure (in mm Hg) upon admission to the hospital. |
+| **Cholesterol** | Serum cholesterol in mg/dl. High levels are associated with plaque buildup in arteries. |
+| **Max Heart Rate** | The maximum heart rate achieved during a stress test. |
+| **ST Depression** | ST depression induced by exercise relative to rest. It measures the stress on the heart muscle. |
+| **Sex** | Biological sex of the patient (**Male** or **Female**). |
+| **Exercise Angina** | **Yes / No**: Whether the patient experiences chest pain specifically during physical exertion. |
+
+---
+
+### **Categorical Explanations**
+
+### **Chest Pain Type**
+This classifies the nature of the pain the patient is experiencing.
+* **Typical Angina:** Classic heart-related chest pain caused by reduced blood flow to the heart.
+* **Atypical Angina:** Chest pain that doesn't fit the classic profile but is still heart-related.
+* **Non-Anginal Pain:** Pain that is likely not related to the heart (e.g., esophageal or muscular).
+* **Asymptomatic:** The patient feels no pain, despite potential underlying heart issues.
+
+### **FBS over 120 (Fasting Blood Sugar)**
+* **Greater than 120 mg/dl:** Often indicates a diabetic or pre-diabetic state.
+* **Less than 120 mg/dl:** Considered within a normal or controlled range.
+
+### **EKG Results (Electrocardiogram)**
+* **Normal:** No significant electrical abnormalities in the heart rhythm.
+* **ST-T Abnormality:** Indicates potential ischemia (lack of oxygen) or electrolyte imbalance.
+* **Left Ventricular Hypertrophy:** Shows thickening of the heart's main pumping chamber wall.
+
+
+### **Slope of ST**
+This refers to the peak exercise ST segment on an EKG.
+* **Upsloping:** Generally considered a normal heart response to exercise.
+* **Flat:** May indicate a lack of oxygen to the heart during stress.
+* **Downsloping:** A strong clinical indicator of coronary artery disease.
+
+### **Number of Vessels Fluro (0–3)**
+* The number of major vessels (0 to 3) colored by fluoroscopy. This visualizes blood flow; a **lower number** usually indicates better flow (fewer blockages).
+
+### **Thallium (Stress Test Results)**
+* **Normal:** Blood flow to the heart muscle is adequate during both rest and exercise.
+* **Fixed Defect:** Indicates a part of the heart muscle has permanent damage (likely a previous heart attack).
+* **Reversible Defect:** Indicates blood flow is restricted during exercise but returns to normal at rest (signs of a significant blockage).
+                  
 """)
