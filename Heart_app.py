@@ -30,6 +30,9 @@ st.write("""
          This app predicts the likelihood of heart disease based on user input parameters. 
          """)
 
+st.divider() # Adds a clean horizontal line
+
+
 # Columns for layout
 col1, col2, col3 = st.columns(3)
 
@@ -70,6 +73,10 @@ col2.caption("""
              It serves as a reminder of the importance of heart health and encourages users to take proactive steps
              """
              )
+
+col3.write("""
+            The model is trained on a dataset of heart disease patients and uses various clinical features to make predictions.
+            """)
 
 # Add a divider to separate sections
 st.divider()
